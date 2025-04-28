@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio de Diego</title>
+</head>
+<body class="container-fluid border-1">
+<main id="fondo">
+    <div class="container-fluid">
+        <video muted autoplay loop>
+            <source src="MULTIMEDIA/fondo.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+    </div>
+    <!--    menu-->
+    <div>
+        <nav id="barra" class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">DIEGO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background: royalblue">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active textmen" aria-current="page" href="#">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SOBRE MI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SKILLS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CURRICULUM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PORTFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="open-game-btn">JUEGO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </nav>
+    </div>
+    <!--    tarjeta de presentacion-->
+    <div class="card-centro">
+        <div class="card">
+            <img src="MULTIMEDIA/hero.jpg" class="card-img-top" alt="foto">
+            <div class="card-body">
+                <h5 class="card-title"><b>DIEGO ANGEL BRAVO</b></h5>
+                <p class="card-text">Programador y Diseñador de videojuegos en Unity.</p>
+                <div class="iconos">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2626/2626269.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://www.facebook.com/diego.neved/'">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://www.instagram.com/diegoangel.bravo/'">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3955/3955051.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://www.linkedin.com/in/diego-bravo-24852b104/'">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2111/2111292.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://github.com/114197-Bravo-Diego'">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    sobre mi-->
+    <div class="container-fluid form">
+        <legend ><span id="legenda" class="input-group-text">Datos de Contacto</span></legend>
+        <div class="input-group mb-3">
+            <div class="input-group">
+                <span class="input-group-text formCaja">Nombre y Apellido</span>
+                <input type="text" aria-label="First name" class="form-control formText">
+                <input type="text" aria-label="Last name" class="form-control formText">
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text formCaja" id="basic-addon2">Direccion de Correo</span>
+            <input type="text" class="form-control formText" placeholder="ejemplo@dominio.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group">
+                <span class="input-group-text formCaja" id="basic-addon3">Pagina de la Compañia</span>
+                <input type="text" class="form-control formText" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="https://ejemplo.com/inicio/">
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text formCaja">Numero Telefonico</span>
+            <input type="number" class="form-control formText" aria-label="Amount (to the nearest dollar)">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-text formCaja">Mensaje</span>
+            <textarea class="form-control formText" aria-label="With textarea"></textarea>
+        </div>
+    </div>
+
+</main>
+
+<!-- Modal para el juego -->
+<div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="gameModalLabel">Space Shooter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div id="game-container">
+                    <canvas id="gameCanvas" width="800" height="600" style="border:1px solid #000; max-width: 100%;"></canvas>
+                    <div class="mt-2">
+                        <p class="mb-1">Puntuación: <span id="score">0</span></p>
+                        <p>Controles: Flechas izquierda/derecha para mover, Espacio para disparar</p>
+                        <button class="btn btn-primary" id="startGame">Iniciar Juego</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+<script>
+    // Script para abrir el modal del juego
+    document.getElementById('open-game-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        var gameModal = new bootstrap.Modal(document.getElementById('gameModal'));
+        gameModal.show();
+    });
+
+    // Script del juego Space Shooter
+    document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const startButton = document.getElementById('startGame');
+        const scoreElement = document.getElementById('score');
+
+        // Variables del juego
+        let score = 0;
+        let gameRunning = false;
+        let gameLoop;
+
+        // Nave del jugador
+        const player = {
+            x: canvas.width / 2,
+            y: canvas.height - 50,
+            width: 50,
+            height: 30,
+            speed: 8,
+            color: '#4169E1'
+        };
+
+        // Arreglos para almacenar disparos y enemigos
+        let bullets = [];
+        let enemies = [];
+
+        // Controles
+        const keys = {
+            ArrowLeft: false,
+            ArrowRight: false,
+            Space: false
+        };
+
+        // Configuración de eventos de teclado
+        window.addEventListener('keydown', function(e) {
+            if (keys.hasOwnProperty(e.code)) {
+                keys[e.code] = true;
+            }
+        });
+
+        window.addEventListener('keyup', function(e) {
+            if (keys.hasOwnProperty(e.code)) {
+                keys[e.code] = false;
+            }
+        });
+
+        // Iniciar juego
+        startButton.addEventListener('click', function() {
+            if (!gameRunning) {
+                resetGame();
+                gameRunning = true;
+                gameLoop = setInterval(update, 1000 / 60); // 60 FPS
+                startButton.textContent = "Reiniciar Juego";
+            } else {
+                resetGame();
+            }
+        });
+
+        // Reiniciar juego
+        function resetGame() {
+            clearInterval(gameLoop);
+            score = 0;
+            scoreElement.textContent = score;
+            player.x = canvas.width / 2;
+            bullets = [];
+            enemies = [];
+            gameRunning = false;
+            gameLoop = setInterval(update, 1000 / 60);
+            gameRunning = true;
+        }
+
+        // Función principal de actualización
+        function update() {
+            // Borrar canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Mover nave
+            if (keys.ArrowLeft && player.x > 0) {
+                player.x -= player.speed;
+            }
+            if (keys.ArrowRight && player.x < canvas.width - player.width) {
+                player.x += player.speed;
+            }
+
+            // Disparar
+            if (keys.Space) {
+                if (bullets.length === 0 || bullets[bullets.length - 1].y < canvas.height - 100) {
+                    bullets.push({
+                        x: player.x + player.width / 2 - 2,
+                        y: player.y - 10,
+                        width: 4,
+                        height: 10,
+                        speed: 10,
+                        color: '#FF0000'
+                    });
+                }
+            }
+
+            // Generar enemigos aleatoriamente
+            if (Math.random() < 0.02) {
+                enemies.push({
+                    x: Math.random() * (canvas.width - 30),
+                    y: 0,
+                    width: 30,
+                    height: 30,
+                    speed: 2 + Math.random() * 2,
+                    color: '#00FF00'
+                });
+            }
+
+            // Mover y dibujar balas
+            for (let i = 0; i < bullets.length; i++) {
+                bullets[i].y -= bullets[i].speed;
+
+                // Eliminar balas fuera del canvas
+                if (bullets[i].y < 0) {
+                    bullets.splice(i, 1);
+                    i--;
+                    continue;
+                }
+
+                // Dibujar bala
+                ctx.fillStyle = bullets[i].color;
+                ctx.fillRect(bullets[i].x, bullets[i].y, bullets[i].width, bullets[i].height);
+            }
+
+            // Mover y dibujar enemigos
+            for (let i = 0; i < enemies.length; i++) {
+                enemies[i].y += enemies[i].speed;
+
+                // Eliminar enemigos fuera del canvas
+                if (enemies[i].y > canvas.height) {
+                    enemies.splice(i, 1);
+                    i--;
+                    continue;
+                }
+
+                // Detectar colisiones con balas
+                for (let j = 0; j < bullets.length; j++) {
+                    if (
+                        bullets[j].x < enemies[i].x + enemies[i].width &&
+                        bullets[j].x + bullets[j].width > enemies[i].x &&
+                        bullets[j].y < enemies[i].y + enemies[i].height &&
+                        bullets[j].y + bullets[j].height > enemies[i].y
+                    ) {
+                        // Colisión detectada
+                        score += 10;
+                        scoreElement.textContent = score;
+                        enemies.splice(i, 1);
+                        bullets.splice(j, 1);
+                        i--;
+                        break;
+                    }
+                }
+
+                // Si el loop continuó después de la colisión
+                if (i < 0) continue;
+
+                // Detectar colisión con jugador
+                if (
+                    player.x < enemies[i].x + enemies[i].width &&
+                    player.x + player.width > enemies[i].x &&
+                    player.y < enemies[i].y + enemies[i].height &&
+                    player.y + player.height > enemies[i].y
+                ) {
+                    // Game over
+                    clearInterval(gameLoop);
+                    gameRunning = false;
+                    startButton.textContent = "Reintentar";
+
+                    // Mostrar mensaje de Game Over
+                    ctx.fillStyle = "#FF0000";
+                    ctx.font = "48px Arial";
+                    ctx.textAlign = "center";
+                    ctx.fillText("¡GAME OVER!", canvas.width / 2, canvas.height / 2);
+                    return;
+                }
+
+                // Dibujar enemigo
+                ctx.fillStyle = enemies[i].color;
+                ctx.fillRect(enemies[i].x, enemies[i].y, enemies[i].width, enemies[i].height);
+            }
+
+            // Dibujar nave del jugador
+            ctx.fillStyle = player.color;
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+
+            // Dibujar cabina de la nave
+            ctx.fillStyle = "#FFFFFF";
+            ctx.fillRect(player.x + player.width / 2 - 5, player.y - 5, 10, 15);
+        }
+
+        // Dibujar canvas inicial
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#FFFFFF";
+        ctx.font = "24px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText("¡Presiona Iniciar Juego para comenzar!", canvas.width / 2, canvas.height / 2);
+    });
+</script>
+<script src="scriptIni.js"></script>
+</body>
+</html>
