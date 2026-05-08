@@ -1,348 +1,830 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Diego Angel Bravo — Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio de Diego</title>
 </head>
-<body class="container-fluid border-1">
-<main id="fondo">
-    <div class="container-fluid">
-        <video muted autoplay loop>
-            <source src="MULTIMEDIA/fondo.mp4" type="video/mp4">
-        </video>
-        <div class="capa"></div>
-    </div>
-    <!--    menu-->
-    <div>
-        <nav id="barra" class="navbar bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">DIEGO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background: royalblue">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active textmen" aria-current="page" href="#">INICIO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">SOBRE MI</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">SKILLS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CURRICULUM</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">PORTFOLIO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" id="open-game-btn">JUEGO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CONTACTO</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-        </nav>
-    </div>
-    <!--    tarjeta de presentacion-->
-    <div class="card-centro">
-        <div class="card">
-            <img src="MULTIMEDIA/hero.jpg" class="card-img-top" alt="foto">
-            <div class="card-body">
-                <h5 class="card-title"><b>DIEGO ANGEL BRAVO</b></h5>
-                <p class="card-text">Programador y Diseñador de videojuegos en Unity.</p>
-                <div class="iconos">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2626/2626269.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://www.facebook.com/diego.neved/'">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://www.instagram.com/diegoangel.bravo/'">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3955/3955051.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://www.linkedin.com/in/diego-bravo-24852b104/'">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2111/2111292.png" style="width: 75px; height: auto" class="btn" onclick="location.href='https://github.com/114197-Bravo-Diego'">
-                </div>
-            </div>
-        </div>
-    </div>
+<body>
 
-    <!--    sobre mi-->
-    <div class="container-fluid form">
-        <legend ><span id="legenda" class="input-group-text">Datos de Contacto</span></legend>
-        <div class="input-group mb-3">
-            <div class="input-group">
-                <span class="input-group-text formCaja">Nombre y Apellido</span>
-                <input type="text" aria-label="First name" class="form-control formText">
-                <input type="text" aria-label="Last name" class="form-control formText">
-            </div>
-        </div>
+<div id="cursor"></div>
+<div class="scanlines"></div>
 
-        <div class="input-group mb-3">
-            <span class="input-group-text formCaja" id="basic-addon2">Direccion de Correo</span>
-            <input type="text" class="form-control formText" placeholder="ejemplo@dominio.com" aria-label="Recipient's username" aria-describedby="basic-addon2">
-        </div>
-
-        <div class="mb-3">
-            <div class="input-group">
-                <span class="input-group-text formCaja" id="basic-addon3">Pagina de la Compañia</span>
-                <input type="text" class="form-control formText" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="https://ejemplo.com/inicio/">
-            </div>
-        </div>
-
-        <div class="input-group mb-3">
-            <span class="input-group-text formCaja">Numero Telefonico</span>
-            <input type="number" class="form-control formText" aria-label="Amount (to the nearest dollar)">
-        </div>
-
-        <div class="input-group">
-            <span class="input-group-text formCaja">Mensaje</span>
-            <textarea class="form-control formText" aria-label="With textarea"></textarea>
-        </div>
-    </div>
-
-</main>
-
-<!-- Modal para el juego -->
-<div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="gameModalLabel">Space Shooter</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <div id="game-container">
-                    <canvas id="gameCanvas" width="800" height="600" style="border:1px solid #000; max-width: 100%;"></canvas>
-                    <div class="mt-2">
-                        <p class="mb-1">Puntuación: <span id="score">0</span></p>
-                        <p>Controles: Flechas izquierda/derecha para mover, Espacio para disparar</p>
-                        <button class="btn btn-primary" id="startGame">Iniciar Juego</button>
-                    </div>
-                </div>
-            </div>
+<!-- Exit overlay -->
+<div class="exit-overlay" id="exitOverlay">
+    <div class="exit-modal">
+        <p class="exit-title">// MISSION ABORT?</p>
+        <p class="exit-sub">Are you sure you want to abandon the mission, soldier?</p>
+        <div class="exit-buttons">
+            <button class="exit-btn stay" id="exitStay">[ STAY ]</button>
+            <button class="exit-btn leave" id="exitLeave">[ LEAVE ]</button>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <a class="navbar-brand" href="#hero">DIEGO</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Side menu overlay -->
+<div class="side-menu-overlay" id="menuOverlay"></div>
+<div class="side-menu" id="sideMenu">
+    <button class="side-menu-close" id="menuClose">&#x2715;</button>
+    <ul>
+        <li><a href="#hero"     class="menu-link">INICIO</a></li>
+        <li><a href="#about"    class="menu-link">ABOUT ME</a></li>
+        <li><a href="#skills"   class="menu-link">SKILLS</a></li>
+        <li><a href="#projects" class="menu-link">PROJECTS</a></li>
+        <li><a href="#cv"       class="menu-link">CV</a></li>
+        <li><a href="#games"    class="menu-link">GAMES</a></li>
+        <li><a href="#contact"  class="menu-link">CONTACT</a></li>
+        <li><a href="#"         id="exitTrigger">[ EXIT ]</a></li>
+    </ul>
+</div>
+
+<!-- ═══════════════════════ HERO ════════════════════════════════ -->
+<section id="hero">
+    <div class="hud-frame">
+        <div class="hud-corner tl"></div>
+        <div class="hud-corner tr"></div>
+        <div class="hud-corner bl"></div>
+        <div class="hud-corner br"></div>
+        <div class="hero-img-wrap">
+            <img src="MULTIMEDIA/hero.jpg" alt="Diego Angel Bravo" class="hero-img">
+        </div>
+    </div>
+    <div class="hero-info">
+        <h1 class="hero-name">DIEGO ANGEL BRAVO</h1>
+        <p class="hero-title">Full Stack Developer &nbsp;|&nbsp; Java + Angular</p>
+        <div class="hero-social">
+            <a href="https://github.com/114197-Bravo-Diego" target="_blank" class="social-link">GH</a>
+            <a href="https://www.linkedin.com/in/diego-bravo-24852b104/" target="_blank" class="social-link">IN</a>
+            <a href="https://www.instagram.com/diegoangel.bravo/" target="_blank" class="social-link">IG</a>
+            <a href="https://www.facebook.com/diego.neved/" target="_blank" class="social-link">FB</a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ ABOUT ME ════════════════════════════ -->
+<section id="about" class="reveal">
+    <div class="section-inner">
+        <h2 class="section-title">// ABOUT_ME</h2>
+        <p class="about-text">
+            Backend engineer by trade, full-stack developer by necessity, gamer by nature.
+            I build robust systems with Java and Angular, architect microservices with Kafka,
+            and containerize everything with Docker. When I'm not pushing code, I'm pushing pixels —
+            designing games in Unity. I treat every project like a boss fight: study the patterns,
+            find the weakness, and don't stop until it's done.
+        </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════ SKILLS ══════════════════════════════ -->
+<section id="skills" class="reveal">
+    <div class="section-inner">
+        <h2 class="section-title">// SKILLS.EXE</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-label"><span>JAVA</span><span class="skill-pct">88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-label"><span>ANGULAR</span><span class="skill-pct">80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-label"><span>C# / .NET</span><span class="skill-pct">75%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-label"><span>APACHE KAFKA</span><span class="skill-pct">70%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-label"><span>DOCKER</span><span class="skill-pct">78%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-label"><span>DATABASES</span><span class="skill-pct">82%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ PROJECTS ════════════════════════════ -->
+<section id="projects" class="reveal">
+    <div class="section-inner">
+        <h2 class="section-title">// PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <span class="project-tag">JAVA · SPRING BOOT · ANGULAR</span>
+                <h3 class="project-name">Clinical Lab System</h3>
+                <p class="project-desc">Full-stack laboratory management system. Patient records, test ordering, result tracking, and report generation with Spring Boot microservices and Angular frontend.</p>
+                <div><a href="https://github.com/114197-Bravo-Diego" target="_blank" class="project-link">[ VIEW CODE ]</a></div>
+            </div>
+            <div class="project-card reveal">
+                <span class="project-tag">JAVA · KAFKA · DOCKER</span>
+                <h3 class="project-name">E-Commerce Platform</h3>
+                <p class="project-desc">Scalable e-commerce backend with product catalog, order management, and Kafka-based event streaming for real-time inventory updates across distributed services.</p>
+                <div><a href="https://github.com/114197-Bravo-Diego" target="_blank" class="project-link">[ VIEW CODE ]</a></div>
+            </div>
+            <div class="project-card reveal">
+                <span class="project-tag">DOCKER · LINUX · NETWORKING</span>
+                <h3 class="project-name">Home NAS Server</h3>
+                <p class="project-desc">Self-hosted network-attached storage with automated backups, media streaming, VPN access, and containerized services — full infrastructure-as-code setup.</p>
+                <div><a href="https://github.com/114197-Bravo-Diego" target="_blank" class="project-link">[ VIEW DOCS ]</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ CV ════════════════════════════════════ -->
+<section id="cv" class="reveal">
+    <div class="section-inner cv-section">
+        <h2 class="section-title">// CURRICULUM.PDF</h2>
+        <p class="cv-text">Download my full resume to see the complete mission log.</p>
+        <a href="CV/CV_Diego_Angel_Bravo.pdf" download class="cv-btn">[ DOWNLOAD CV ]</a>
+    </div>
+</section>
+
+<!-- ═══════════════════════ GAMES ════════════════════════════════ -->
+<section id="games" class="reveal">
+    <div class="section-inner">
+        <h2 class="section-title">// ARCADE.EXE</h2>
+        <div class="games-tabs">
+            <button class="game-tab active" data-game="shooter">SPACE SHOOTER</button>
+            <button class="game-tab" data-game="fighter">STREET FIGHTER</button>
+            <button class="game-tab" data-game="racer">SPACE RACER</button>
+        </div>
+
+        <!-- Space Shooter -->
+        <div class="game-panel active" id="game-shooter">
+            <div class="game-hud">
+                <span>SCORE: <span id="sh-score">0</span></span>
+                <span>LIVES: <span id="sh-lives">3</span></span>
+                <span>LEVEL: <span id="sh-level">1</span></span>
+            </div>
+            <canvas id="shooterCanvas" width="700" height="460"></canvas>
+            <div class="game-controls-info">[ &larr; &rarr; &uarr; &darr; ] Move &nbsp;|&nbsp; [ SPACE ] Shoot &nbsp;|&nbsp; [ ENTER ] Start / Restart</div>
+        </div>
+
+        <!-- Fighter -->
+        <div class="game-panel" id="game-fighter">
+            <div class="game-hud fighter-hud">
+                <div class="fighter-hp-bar">
+                    <span>P1</span>
+                    <div class="hp-bar-bg"><div class="hp-bar-fill p1" id="p1-hp"></div></div>
+                </div>
+                <span class="round-timer" id="fight-timer">60</span>
+                <div class="fighter-hp-bar right">
+                    <div class="hp-bar-bg"><div class="hp-bar-fill p2" id="p2-hp" style="margin-left:auto;"></div></div>
+                    <span>P2</span>
+                </div>
+            </div>
+            <canvas id="fighterCanvas" width="700" height="400"></canvas>
+            <div class="game-controls-info">P1: [A/D] Move &nbsp;[W] Jump &nbsp;[S] Block &nbsp;[F] Attack &nbsp;&nbsp;|&nbsp;&nbsp; P2: [&larr;/&rarr;] Move &nbsp;[&uarr;] Jump &nbsp;[&darr;] Block &nbsp;[L] Attack &nbsp;&nbsp;|&nbsp;&nbsp; [ENTER] Start</div>
+        </div>
+
+        <!-- Racer -->
+        <div class="game-panel" id="game-racer">
+            <div class="game-hud racer-hud">
+                <span>SPEED: <span id="rc-speed">0</span></span>
+                <span>FUEL: <span id="rc-fuel">100</span>%</span>
+                <span>DICE: <span id="rc-dice">-</span></span>
+                <span>SCORE: <span id="rc-score">0</span></span>
+            </div>
+            <canvas id="racerCanvas" width="700" height="440"></canvas>
+            <div class="game-controls-info">[ &larr; &rarr; &uarr; &darr; ] Move &nbsp;|&nbsp; [ SPACE ] Roll Dice &nbsp;|&nbsp; [ ENTER ] Start / Restart</div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════ CONTACT ══════════════════════════════ -->
+<section id="contact" class="reveal">
+    <div class="section-inner">
+        <h2 class="section-title">// CONTACT.INIT</h2>
+        <div class="terminal-form">
+            <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">send_message.sh</span>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <label>&gt; NAME:</label>
+                    <input type="text" name="name" placeholder="enter your name..." required>
+                </div>
+                <div class="form-row">
+                    <label>&gt; EMAIL:</label>
+                    <input type="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-row">
+                    <label>&gt; COMPANY:</label>
+                    <input type="text" name="company" placeholder="optional...">
+                </div>
+                <div class="form-row">
+                    <label>&gt; MESSAGE:</label>
+                    <textarea name="message" rows="5" placeholder="type your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">[ SEND TRANSMISSION ]</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 DIEGO ANGEL BRAVO &nbsp;|&nbsp; BUILT WITH &lt;/&gt; AND COFFEE</p>
+</footer>
 
 <script>
-    // Script para abrir el modal del juego
-    document.getElementById('open-game-btn').addEventListener('click', function(e) {
-        e.preventDefault();
-        var gameModal = new bootstrap.Modal(document.getElementById('gameModal'));
-        gameModal.show();
+// ─── Cursor ───────────────────────────────────────────────────────
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+});
+document.querySelectorAll('a,button,canvas,.project-card').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+});
+
+// ─── Hamburger / side menu ────────────────────────────────────────
+const hamburger   = document.getElementById('hamburger');
+const sideMenu    = document.getElementById('sideMenu');
+const menuOverlay = document.getElementById('menuOverlay');
+const menuClose   = document.getElementById('menuClose');
+
+function openMenu()  { sideMenu.classList.add('open'); menuOverlay.classList.add('show'); hamburger.classList.add('open'); }
+function closeMenu() { sideMenu.classList.remove('open'); menuOverlay.classList.remove('show'); hamburger.classList.remove('open'); }
+
+hamburger.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+menuOverlay.addEventListener('click', closeMenu);
+document.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', closeMenu));
+
+// ─── Scroll reveal ────────────────────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            // Animate skill bars when they appear
+            e.target.querySelectorAll('.skill-fill').forEach(bar => {
+                bar.style.width = bar.dataset.width + '%';
+            });
+        }
     });
+}, { threshold: 0.15 });
 
-    // Script del juego Space Shooter
-    document.addEventListener('DOMContentLoaded', function() {
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        const startButton = document.getElementById('startGame');
-        const scoreElement = document.getElementById('score');
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-        // Variables del juego
-        let score = 0;
-        let gameRunning = false;
-        let gameLoop;
+// Also trigger skills if already visible on load
+window.addEventListener('load', () => {
+    document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            el.classList.add('visible');
+            el.querySelectorAll('.skill-fill').forEach(bar => { bar.style.width = bar.dataset.width + '%'; });
+        }
+    });
+});
 
-        // Nave del jugador
-        const player = {
-            x: canvas.width / 2,
-            y: canvas.height - 50,
-            width: 50,
-            height: 30,
-            speed: 8,
-            color: '#4169E1'
-        };
+// ─── Game tabs ────────────────────────────────────────────────────
+const gameTabs   = document.querySelectorAll('.game-tab');
+const gamePanels = document.querySelectorAll('.game-panel');
 
-        // Arreglos para almacenar disparos y enemigos
-        let bullets = [];
-        let enemies = [];
+const activeFlags = { shooter: false, fighter: false, racer: false };
 
-        // Controles
-        const keys = {
-            ArrowLeft: false,
-            ArrowRight: false,
-            Space: false
-        };
+function setActiveGame(name) {
+    Object.keys(activeFlags).forEach(k => { activeFlags[k] = (k === name); });
+}
 
-        // Configuración de eventos de teclado
-        window.addEventListener('keydown', function(e) {
-            if (keys.hasOwnProperty(e.code)) {
-                keys[e.code] = true;
-            }
+gameTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        gameTabs.forEach(t => t.classList.remove('active'));
+        gamePanels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('game-' + tab.dataset.game).classList.add('active');
+        setActiveGame(tab.dataset.game);
+    });
+});
+
+setActiveGame('shooter'); // default
+
+// ─── SPACE SHOOTER ───────────────────────────────────────────────
+(function() {
+    const cv     = document.getElementById('shooterCanvas');
+    const ctx    = cv.getContext('2d');
+    const W = cv.width, H = cv.height;
+    const scoreEl = document.getElementById('sh-score');
+    const livesEl = document.getElementById('sh-lives');
+    const levelEl = document.getElementById('sh-level');
+
+    let state = 'idle', animId = null;
+    let score, lives, level, player, bullets, enemies, stars, particles;
+    let lastShot = 0, enemyTimer = 0;
+    const keys = {};
+
+    function init() {
+        score = 0; lives = 3; level = 1;
+        player   = { x: W/2, y: H-60, r: 22, speed: 6 };
+        bullets  = []; enemies = []; particles = [];
+        stars    = Array.from({length:90}, () => ({
+            x: Math.random()*W, y: Math.random()*H,
+            r: Math.random()*1.5+0.3, s: Math.random()*1.8+0.5
+        }));
+        enemyTimer = 0; state = 'playing';
+        scoreEl.textContent = 0; livesEl.textContent = 3; levelEl.textContent = 1;
+    }
+
+    function spawnEnemy() {
+        const type = ['basic','diamond','heavy'][Math.min(Math.floor(Math.random()*(level>3?3:level)),2)];
+        const sizes = {basic:16, diamond:14, heavy:22};
+        enemies.push({
+            x: Math.random()*(W-60)+30, y: -35,
+            r: sizes[type],
+            speed: 1.4 + Math.random()*(level*0.4),
+            type,
+            hp: type==='heavy' ? 3 : 1,
+            color: type==='heavy' ? '#c0392b' : (type==='diamond' ? '#e6a817' : '#2ecc71')
         });
+    }
 
-        window.addEventListener('keyup', function(e) {
-            if (keys.hasOwnProperty(e.code)) {
-                keys[e.code] = false;
-            }
-        });
+    function boom(x, y, col) {
+        for (let i=0;i<14;i++) {
+            const a = Math.random()*Math.PI*2, s = Math.random()*4+1;
+            particles.push({ x,y, vx:Math.cos(a)*s, vy:Math.sin(a)*s, life:1, color:col });
+        }
+    }
 
-        // Iniciar juego
-        startButton.addEventListener('click', function() {
-            if (!gameRunning) {
-                resetGame();
-                gameRunning = true;
-                gameLoop = setInterval(update, 1000 / 60); // 60 FPS
-                startButton.textContent = "Reiniciar Juego";
-            } else {
-                resetGame();
-            }
-        });
+    function drawPlayer(p) {
+        ctx.save(); ctx.translate(p.x, p.y);
+        ctx.beginPath();
+        ctx.moveTo(0,-p.r*1.2); ctx.lineTo(-p.r,p.r); ctx.lineTo(-p.r*.4,p.r*.5);
+        ctx.lineTo(0,p.r*.7);   ctx.lineTo(p.r*.4,p.r*.5); ctx.lineTo(p.r,p.r);
+        ctx.closePath();
+        ctx.fillStyle='#0D7A6E'; ctx.shadowColor='#0D7A6E'; ctx.shadowBlur=12; ctx.fill();
+        ctx.beginPath(); ctx.arc(0,-p.r*.3,5,0,Math.PI*2);
+        ctx.fillStyle='#a0e0d8'; ctx.fill();
+        // engine
+        ctx.beginPath(); ctx.moveTo(-p.r*.4,p.r*.5); ctx.lineTo(0,p.r+8+Math.random()*6); ctx.lineTo(p.r*.4,p.r*.5);
+        ctx.fillStyle='rgba(13,122,110,0.7)'; ctx.fill();
+        ctx.shadowBlur=0; ctx.restore();
+    }
 
-        // Reiniciar juego
-        function resetGame() {
-            clearInterval(gameLoop);
-            score = 0;
-            scoreElement.textContent = score;
-            player.x = canvas.width / 2;
-            bullets = [];
-            enemies = [];
-            gameRunning = false;
-            gameLoop = setInterval(update, 1000 / 60);
-            gameRunning = true;
+    function drawEnemy(e) {
+        ctx.save(); ctx.translate(e.x,e.y);
+        ctx.fillStyle=e.color; ctx.shadowColor=e.color; ctx.shadowBlur=8;
+        ctx.beginPath();
+        if (e.type==='diamond') {
+            ctx.moveTo(0,-e.r*1.3); ctx.lineTo(e.r,0); ctx.lineTo(0,e.r*1.3); ctx.lineTo(-e.r,0);
+        } else if (e.type==='heavy') {
+            for(let i=0;i<6;i++){const a=(i/6)*Math.PI*2-Math.PI/2; i?ctx.lineTo(Math.cos(a)*e.r,Math.sin(a)*e.r):ctx.moveTo(Math.cos(a)*e.r,Math.sin(a)*e.r);}
+        } else {
+            ctx.moveTo(0,e.r); ctx.lineTo(-e.r,-e.r); ctx.lineTo(e.r,-e.r);
+        }
+        ctx.closePath(); ctx.fill(); ctx.shadowBlur=0; ctx.restore();
+    }
+
+    function update(now) {
+        stars.forEach(s => { s.y+=s.s; if(s.y>H) s.y=0; });
+        if(keys['ArrowLeft']  && player.x>player.r+5)     player.x -= player.speed;
+        if(keys['ArrowRight'] && player.x<W-player.r-5)   player.x += player.speed;
+        if(keys['ArrowUp']    && player.y>player.r+65)    player.y -= player.speed;
+        if(keys['ArrowDown']  && player.y<H-player.r-5)   player.y += player.speed;
+
+        if(keys[' '] && now-lastShot>200) {
+            lastShot=now;
+            bullets.push({x:player.x,y:player.y-player.r-4,speed:13});
         }
 
-        // Función principal de actualización
-        function update() {
-            // Borrar canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for(let i=bullets.length-1;i>=0;i--) {
+            bullets[i].y -= bullets[i].speed;
+            if(bullets[i].y<-10) { bullets.splice(i,1); }
+        }
 
-            // Mover nave
-            if (keys.ArrowLeft && player.x > 0) {
-                player.x -= player.speed;
-            }
-            if (keys.ArrowRight && player.x < canvas.width - player.width) {
-                player.x += player.speed;
-            }
+        enemyTimer++;
+        const rate = Math.max(28, 75-level*7);
+        if(enemyTimer>=rate) { enemyTimer=0; spawnEnemy(); }
 
-            // Disparar
-            if (keys.Space) {
-                if (bullets.length === 0 || bullets[bullets.length - 1].y < canvas.height - 100) {
-                    bullets.push({
-                        x: player.x + player.width / 2 - 2,
-                        y: player.y - 10,
-                        width: 4,
-                        height: 10,
-                        speed: 10,
-                        color: '#FF0000'
-                    });
-                }
-            }
-
-            // Generar enemigos aleatoriamente
-            if (Math.random() < 0.02) {
-                enemies.push({
-                    x: Math.random() * (canvas.width - 30),
-                    y: 0,
-                    width: 30,
-                    height: 30,
-                    speed: 2 + Math.random() * 2,
-                    color: '#00FF00'
-                });
-            }
-
-            // Mover y dibujar balas
-            for (let i = 0; i < bullets.length; i++) {
-                bullets[i].y -= bullets[i].speed;
-
-                // Eliminar balas fuera del canvas
-                if (bullets[i].y < 0) {
-                    bullets.splice(i, 1);
-                    i--;
-                    continue;
-                }
-
-                // Dibujar bala
-                ctx.fillStyle = bullets[i].color;
-                ctx.fillRect(bullets[i].x, bullets[i].y, bullets[i].width, bullets[i].height);
-            }
-
-            // Mover y dibujar enemigos
-            for (let i = 0; i < enemies.length; i++) {
-                enemies[i].y += enemies[i].speed;
-
-                // Eliminar enemigos fuera del canvas
-                if (enemies[i].y > canvas.height) {
-                    enemies.splice(i, 1);
-                    i--;
-                    continue;
-                }
-
-                // Detectar colisiones con balas
-                for (let j = 0; j < bullets.length; j++) {
-                    if (
-                        bullets[j].x < enemies[i].x + enemies[i].width &&
-                        bullets[j].x + bullets[j].width > enemies[i].x &&
-                        bullets[j].y < enemies[i].y + enemies[i].height &&
-                        bullets[j].y + bullets[j].height > enemies[i].y
-                    ) {
-                        // Colisión detectada
-                        score += 10;
-                        scoreElement.textContent = score;
-                        enemies.splice(i, 1);
-                        bullets.splice(j, 1);
-                        i--;
-                        break;
+        for(let i=enemies.length-1;i>=0;i--) {
+            const e=enemies[i];
+            e.y += e.speed;
+            if(e.y>H+40) { enemies.splice(i,1); continue; }
+            let killed=false;
+            for(let j=bullets.length-1;j>=0;j--) {
+                const b=bullets[j];
+                if(Math.hypot(b.x-e.x,b.y-e.y)<e.r+5) {
+                    bullets.splice(j,1); e.hp--;
+                    if(e.hp<=0) {
+                        boom(e.x,e.y,e.color);
+                        score += e.type==='heavy'?30:(e.type==='diamond'?20:10);
+                        level  = Math.floor(score/200)+1;
+                        scoreEl.textContent=score; livesEl.textContent=lives; levelEl.textContent=level;
+                        enemies.splice(i,1); killed=true;
                     }
+                    break;
                 }
-
-                // Si el loop continuó después de la colisión
-                if (i < 0) continue;
-
-                // Detectar colisión con jugador
-                if (
-                    player.x < enemies[i].x + enemies[i].width &&
-                    player.x + player.width > enemies[i].x &&
-                    player.y < enemies[i].y + enemies[i].height &&
-                    player.y + player.height > enemies[i].y
-                ) {
-                    // Game over
-                    clearInterval(gameLoop);
-                    gameRunning = false;
-                    startButton.textContent = "Reintentar";
-
-                    // Mostrar mensaje de Game Over
-                    ctx.fillStyle = "#FF0000";
-                    ctx.font = "48px Arial";
-                    ctx.textAlign = "center";
-                    ctx.fillText("¡GAME OVER!", canvas.width / 2, canvas.height / 2);
-                    return;
-                }
-
-                // Dibujar enemigo
-                ctx.fillStyle = enemies[i].color;
-                ctx.fillRect(enemies[i].x, enemies[i].y, enemies[i].width, enemies[i].height);
             }
-
-            // Dibujar nave del jugador
-            ctx.fillStyle = player.color;
-            ctx.fillRect(player.x, player.y, player.width, player.height);
-
-            // Dibujar cabina de la nave
-            ctx.fillStyle = "#FFFFFF";
-            ctx.fillRect(player.x + player.width / 2 - 5, player.y - 5, 10, 15);
+            if(killed) continue;
+            if(Math.hypot(e.x-player.x,e.y-player.y)<e.r+player.r-8) {
+                boom(e.x,e.y,e.color); enemies.splice(i,1); lives--;
+                livesEl.textContent=lives;
+                if(lives<=0) { state='gameover'; return; }
+            }
         }
 
-        // Dibujar canvas inicial
-        ctx.fillStyle = "#000000";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#FFFFFF";
-        ctx.font = "24px Arial";
-        ctx.textAlign = "center";
-        ctx.fillText("¡Presiona Iniciar Juego para comenzar!", canvas.width / 2, canvas.height / 2);
+        for(let i=particles.length-1;i>=0;i--) {
+            const p=particles[i]; p.x+=p.vx; p.y+=p.vy; p.life-=0.04;
+            if(p.life<=0) particles.splice(i,1);
+        }
+    }
+
+    function draw() {
+        ctx.fillStyle='#020c0a'; ctx.fillRect(0,0,W,H);
+        stars.forEach(s=>{ ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2); ctx.fillStyle='rgba(200,220,218,0.65)'; ctx.fill(); });
+
+        if(state==='idle') {
+            ctx.fillStyle='#0D7A6E'; ctx.font='16px Courier New'; ctx.textAlign='center';
+            ctx.fillText('[ PRESS ENTER TO START ]',W/2,H/2); return;
+        }
+
+        bullets.forEach(b=>{ ctx.fillStyle='#0D7A6E'; ctx.shadowColor='#0D7A6E'; ctx.shadowBlur=6; ctx.fillRect(b.x-2,b.y,4,12); ctx.shadowBlur=0; });
+        enemies.forEach(e=>drawEnemy(e));
+        drawPlayer(player);
+        particles.forEach(p=>{ ctx.beginPath(); ctx.arc(p.x,p.y,3,0,Math.PI*2); ctx.fillStyle=p.color; ctx.globalAlpha=p.life; ctx.fill(); ctx.globalAlpha=1; });
+
+        if(state==='gameover') {
+            ctx.fillStyle='rgba(0,0,0,0.72)'; ctx.fillRect(0,0,W,H);
+            ctx.fillStyle='#c0392b'; ctx.font='bold 32px Courier New'; ctx.textAlign='center';
+            ctx.fillText('GAME OVER',W/2,H/2-24);
+            ctx.fillStyle='#0D7A6E'; ctx.font='14px Courier New';
+            ctx.fillText('SCORE: '+score,W/2,H/2+16);
+            ctx.fillText('[ ENTER ] RESTART',W/2,H/2+48);
+        }
+    }
+
+    function loop(ts) { animId=requestAnimationFrame(loop); update(ts); draw(); }
+    function start()  { if(animId) cancelAnimationFrame(animId); init(); animId=requestAnimationFrame(loop); }
+
+    // Idle screen
+    ctx.fillStyle='#020c0a'; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#0D7A6E'; ctx.font='16px Courier New'; ctx.textAlign='center';
+    ctx.fillText('[ PRESS ENTER TO START ]',W/2,H/2);
+
+    document.addEventListener('keydown', e => {
+        if(!activeFlags.shooter) return;
+        keys[e.key]=true;
+        if(e.key==='Enter' && (state==='idle'||state==='gameover')) start();
+        if([' ','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) e.preventDefault();
     });
+    document.addEventListener('keyup',  e => { keys[e.key]=false; });
+})();
+
+// ─── FIGHTER ─────────────────────────────────────────────────────
+(function() {
+    const cv   = document.getElementById('fighterCanvas');
+    const ctx  = cv.getContext('2d');
+    const W = cv.width, H = cv.height;
+    const FLOOR = H - 50, G = 0.55;
+    const p1HpEl = document.getElementById('p1-hp');
+    const p2HpEl = document.getElementById('p2-hp');
+    const timerEl = document.getElementById('fight-timer');
+
+    let state='idle', animId=null, winner='';
+    let timer=60, timerTick=0;
+    const keys={}, prevKeys={};
+
+    const F1 = { x:160, y:FLOOR, vx:0, vy:0, onFloor:true, hp:100, facing:1,  color:'#0D7A6E', headCol:'#a0e0d8', attacking:0, atCooldown:0, blocking:false };
+    const F2 = { x:W-160, y:FLOOR, vx:0, vy:0, onFloor:true, hp:100, facing:-1, color:'#c0392b', headCol:'#f0a0a0', attacking:0, atCooldown:0, blocking:false };
+
+    function reset() {
+        Object.assign(F1,{x:160,y:FLOOR,vx:0,vy:0,onFloor:true,hp:100,facing:1,attacking:0,atCooldown:0,blocking:false});
+        Object.assign(F2,{x:W-160,y:FLOOR,vx:0,vy:0,onFloor:true,hp:100,facing:-1,attacking:0,atCooldown:0,blocking:false});
+        timer=60; timerTick=0; winner='';
+        p1HpEl.style.width='100%'; p2HpEl.style.width='100%';
+        timerEl.textContent='60'; state='playing';
+    }
+
+    function updateHPBars() {
+        p1HpEl.style.width = F1.hp+'%';
+        p2HpEl.style.width = F2.hp+'%';
+    }
+
+    function tryHit(attacker, defender) {
+        const dx = defender.x - attacker.x;
+        if (attacker.facing * dx > 0 && Math.abs(dx) < 70 && Math.abs(defender.y - attacker.y) < 55) {
+            defender.hp = Math.max(0, defender.hp - (defender.blocking ? 3 : 14));
+            updateHPBars();
+        }
+    }
+
+    function drawFighter(f) {
+        ctx.save(); ctx.translate(f.x, f.y);
+        if(f.facing===-1) ctx.scale(-1,1);
+        ctx.fillStyle=f.color;
+        // Legs
+        ctx.fillRect(-10,-32,9,32); ctx.fillRect(1,-32,9,32);
+        // Body
+        ctx.fillRect(-14,-82,28,52);
+        // Head
+        ctx.fillStyle=f.headCol; ctx.fillRect(-12,-102,24,22);
+        // Arms
+        if(f.attacking>0) {
+            ctx.fillStyle=f.color; ctx.fillRect(14,-80,40,11);
+            ctx.fillStyle=f.headCol; ctx.fillRect(52,-83,13,15);
+        } else if(f.blocking) {
+            ctx.fillStyle=f.color; ctx.fillRect(9,-92,11,46); ctx.fillRect(20,-92,9,42);
+        } else {
+            ctx.fillStyle=f.color; ctx.fillRect(-23,-80,9,26); ctx.fillRect(14,-80,9,26);
+        }
+        ctx.restore();
+    }
+
+    function update() {
+        if(state!=='playing') return;
+        const jp={};
+        for(const k in keys) if(keys[k]&&!prevKeys[k]) jp[k]=true;
+
+        const SPEED=4;
+        // P1
+        F1.blocking=!!keys['s'];
+        F1.vx = keys['a']?-SPEED:(keys['d']?SPEED:0);
+        if(F1.vx<0) F1.facing=-1; else if(F1.vx>0) F1.facing=1;
+        if(jp['w']&&F1.onFloor){F1.vy=-15;F1.onFloor=false;}
+        if(jp['f']&&F1.atCooldown<=0){F1.attacking=14;F1.atCooldown=28;tryHit(F1,F2);}
+
+        // P2
+        F2.blocking=!!keys['ArrowDown'];
+        F2.vx = keys['ArrowLeft']?-SPEED:(keys['ArrowRight']?SPEED:0);
+        if(F2.vx<0) F2.facing=-1; else if(F2.vx>0) F2.facing=1;
+        if(jp['ArrowUp']&&F2.onFloor){F2.vy=-15;F2.onFloor=false;}
+        if(jp['l']&&F2.atCooldown<=0){F2.attacking=14;F2.atCooldown=28;tryHit(F2,F1);}
+
+        [F1,F2].forEach(f=>{
+            f.vy+=G; f.x+=f.vx; f.y+=f.vy;
+            if(f.y>=FLOOR){f.y=FLOOR;f.vy=0;f.onFloor=true;}
+            f.x=Math.max(20,Math.min(W-20,f.x));
+            if(f.attacking>0) f.attacking--;
+            if(f.atCooldown>0) f.atCooldown--;
+        });
+
+        // Auto-face
+        if(!keys['a']&&!keys['d']) F1.facing=F2.x>F1.x?1:-1;
+        if(!keys['ArrowLeft']&&!keys['ArrowRight']) F2.facing=F1.x>F2.x?1:-1;
+
+        timerTick++;
+        if(timerTick>=60){timerTick=0;timer--;timerEl.textContent=Math.max(0,timer);}
+
+        if(F1.hp<=0){winner='PLAYER 2';state='result';}
+        else if(F2.hp<=0){winner='PLAYER 1';state='result';}
+        else if(timer<=0){winner=F1.hp>=F2.hp?'PLAYER 1':'PLAYER 2';state='result';}
+
+        Object.assign(prevKeys,keys);
+    }
+
+    function draw() {
+        ctx.fillStyle='#0d0d0d'; ctx.fillRect(0,0,W,H);
+        // Floor
+        ctx.fillStyle='#1a1a1a'; ctx.fillRect(0,FLOOR+2,W,H-FLOOR);
+        ctx.strokeStyle='rgba(13,122,110,0.35)'; ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(0,FLOOR+2); ctx.lineTo(W,FLOOR+2); ctx.stroke();
+        // Grid lines
+        ctx.strokeStyle='rgba(13,122,110,0.07)';
+        for(let i=1;i<8;i++){ctx.beginPath();ctx.moveTo(i*(W/8),FLOOR+2);ctx.lineTo(i*(W/8),H);ctx.stroke();}
+        // Center line
+        ctx.strokeStyle='rgba(13,122,110,0.12)';
+        ctx.beginPath(); ctx.moveTo(W/2,0); ctx.lineTo(W/2,FLOOR+2); ctx.stroke();
+
+        if(state==='idle'){
+            ctx.fillStyle='#0D7A6E'; ctx.font='16px Courier New'; ctx.textAlign='center';
+            ctx.fillText('[ PRESS ENTER TO START ]',W/2,H/2); return;
+        }
+
+        drawFighter(F1); drawFighter(F2);
+
+        if(state==='result'){
+            ctx.fillStyle='rgba(0,0,0,0.75)'; ctx.fillRect(0,0,W,H);
+            ctx.fillStyle='#0D7A6E'; ctx.font='bold 30px Courier New'; ctx.textAlign='center';
+            ctx.fillText(winner+' WINS!',W/2,H/2-22);
+            ctx.font='14px Courier New';
+            ctx.fillText('[ ENTER ] REMATCH',W/2,H/2+22);
+        }
+    }
+
+    function loop(){ animId=requestAnimationFrame(loop); update(); draw(); }
+
+    ctx.fillStyle='#0d0d0d'; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#0D7A6E'; ctx.font='16px Courier New'; ctx.textAlign='center';
+    ctx.fillText('[ PRESS ENTER TO START ]',W/2,H/2);
+
+    document.addEventListener('keydown', e=>{
+        if(!activeFlags.fighter) return;
+        keys[e.key]=true;
+        if(e.key==='Enter'){
+            if(state==='idle'||state==='result'){reset(); if(!animId) loop();}
+        }
+        if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key)) e.preventDefault();
+    });
+    document.addEventListener('keyup', e=>{ keys[e.key]=false; prevKeys[e.key]=false; });
+})();
+
+// ─── SPACE RACER WITH DICE ────────────────────────────────────────
+(function() {
+    const cv  = document.getElementById('racerCanvas');
+    const ctx = cv.getContext('2d');
+    const W = cv.width, H = cv.height;
+    const speedEl = document.getElementById('rc-speed');
+    const fuelEl  = document.getElementById('rc-fuel');
+    const diceEl  = document.getElementById('rc-dice');
+    const scoreEl = document.getElementById('rc-score');
+
+    let state='idle', animId=null;
+    const keys={};
+    let player, asteroids, stars, particles;
+    let score, fuel, baseSpeed, shieldTime, doubleScore, diceResult, diceCooldown, shieldActive;
+
+    const DICE_LABELS = {1:'SLOW',2:'NOTHING',3:'BOOST!',4:'SHIELD',5:'+FUEL',6:'2x PTS'};
+
+    function init() {
+        player     = {x:W/2,y:H-80,speed:5};
+        asteroids  = []; particles = [];
+        score=0; fuel=100; baseSpeed=3; shieldTime=0;
+        doubleScore=0; diceResult=null; diceCooldown=0; shieldActive=false;
+        stars = Array.from({length:80},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.3,s:Math.random()*2+.8}));
+        state='playing'; updateHUD();
+    }
+
+    function updateHUD(){
+        speedEl.textContent = Math.floor(baseSpeed*18);
+        fuelEl.textContent  = Math.floor(fuel);
+        diceEl.textContent  = diceResult ? (diceResult+': '+DICE_LABELS[diceResult]) : '-';
+        scoreEl.textContent = score;
+    }
+
+    function spawnAst(){
+        const r=15+Math.random()*22;
+        asteroids.push({x:Math.random()*(W-60)+30,y:-r*2,r,vx:(Math.random()-.5)*2,rot:0,rotS:(Math.random()-.5)*.06,speed:baseSpeed*(0.7+Math.random()*.7)});
+    }
+
+    function rollDice(){
+        if(diceCooldown>0) return;
+        diceCooldown=360;
+        diceResult=Math.floor(Math.random()*6)+1;
+        if(diceResult===1) baseSpeed=Math.max(1.8,baseSpeed-1.4);
+        if(diceResult===3) baseSpeed=Math.min(8,baseSpeed+1.8);
+        if(diceResult===4){shieldActive=true;shieldTime=300;}
+        if(diceResult===5) fuel=Math.min(100,fuel+28);
+        if(diceResult===6) doubleScore=600;
+        updateHUD();
+    }
+
+    function boom(x,y){for(let i=0;i<16;i++){const a=Math.random()*Math.PI*2,s=Math.random()*5+1;particles.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:1,color:'#c0392b'});}}
+
+    function drawShip(x,y,shield){
+        ctx.save(); ctx.translate(x,y);
+        if(shield){ctx.beginPath();ctx.arc(0,0,34,0,Math.PI*2);ctx.strokeStyle='rgba(13,122,110,.65)';ctx.lineWidth=3;ctx.stroke();ctx.strokeStyle='rgba(13,122,110,.2)';ctx.lineWidth=9;ctx.stroke();}
+        ctx.beginPath();ctx.moveTo(0,-24);ctx.lineTo(-14,18);ctx.lineTo(-6,10);ctx.lineTo(0,16);ctx.lineTo(6,10);ctx.lineTo(14,18);ctx.closePath();
+        ctx.fillStyle='#0D7A6E';ctx.shadowColor='#0D7A6E';ctx.shadowBlur=12;ctx.fill();
+        ctx.beginPath();ctx.ellipse(0,-5,5,8,0,0,Math.PI*2);ctx.fillStyle='#a0e0d8';ctx.fill();
+        ctx.beginPath();ctx.moveTo(-6,10);ctx.lineTo(0,22+Math.random()*8);ctx.lineTo(6,10);ctx.fillStyle='rgba(13,122,110,.8)';ctx.fill();
+        ctx.shadowBlur=0;ctx.restore();
+    }
+
+    function drawAst(a){
+        ctx.save();ctx.translate(a.x,a.y);ctx.rotate(a.rot);
+        ctx.beginPath();
+        for(let i=0;i<8;i++){const ang=(i/8)*Math.PI*2,r=a.r*(0.75+Math.sin(i*2.1+1)*0.25);i?ctx.lineTo(Math.cos(ang)*r,Math.sin(ang)*r):ctx.moveTo(Math.cos(ang)*r,Math.sin(ang)*r);}
+        ctx.closePath();ctx.fillStyle='#2a2a2a';ctx.strokeStyle='#555';ctx.lineWidth=1.5;ctx.fill();ctx.stroke();
+        ctx.restore();
+    }
+
+    function drawDiceBox(result){
+        if(!result) return;
+        const x=W-62, y=48;
+        ctx.fillStyle='rgba(0,0,0,.75)';ctx.fillRect(x-22,y-22,44,44);
+        ctx.strokeStyle='#0D7A6E';ctx.lineWidth=2;ctx.strokeRect(x-22,y-22,44,44);
+        ctx.fillStyle='#0D7A6E';ctx.font='bold 22px Courier New';ctx.textAlign='center';ctx.textBaseline='middle';
+        ctx.fillText(result,x,y);ctx.textBaseline='alphabetic';
+    }
+
+    function update(){
+        if(state!=='playing') return;
+        if(keys['ArrowLeft']  &&player.x>25)    player.x-=player.speed;
+        if(keys['ArrowRight'] &&player.x<W-25)  player.x+=player.speed;
+        if(keys['ArrowUp']    &&player.y>70)    player.y-=player.speed*.6;
+        if(keys['ArrowDown']  &&player.y<H-40)  player.y+=player.speed*.6;
+        if(keys[' ']&&diceCooldown<=0){rollDice();keys[' ']=false;}
+
+        stars.forEach(s=>{s.y+=s.s+baseSpeed*.25;if(s.y>H){s.y=0;s.x=Math.random()*W;}});
+
+        for(let i=asteroids.length-1;i>=0;i--){
+            const a=asteroids[i];
+            a.y+=baseSpeed+a.speed*.4; a.x+=a.vx; a.rot+=a.rotS;
+            if(a.y>H+a.r){asteroids.splice(i,1);continue;}
+            if(Math.hypot(a.x-player.x,a.y-player.y)<a.r+18&&!shieldActive){
+                boom(a.x,a.y); state='gameover'; return;
+            }
+        }
+
+        if(Math.random()<.018+baseSpeed*.004) spawnAst();
+        fuel -= .014*baseSpeed; if(fuel<=0){fuel=0;state='gameover';return;}
+        score+=doubleScore>0?2:1;
+        if(shieldTime>0){shieldTime--;if(shieldTime<=0)shieldActive=false;}
+        if(doubleScore>0) doubleScore--;
+        if(diceCooldown>0) diceCooldown--;
+        baseSpeed=Math.min(7,3+score/5000);
+        for(let i=particles.length-1;i>=0;i--){const p=particles[i];p.x+=p.vx;p.y+=p.vy;p.life-=.03;if(p.life<=0)particles.splice(i,1);}
+        updateHUD();
+    }
+
+    function draw(){
+        ctx.fillStyle='#020c0a';ctx.fillRect(0,0,W,H);
+        stars.forEach(s=>{ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle='rgba(200,220,218,.6)';ctx.fill();});
+
+        if(state==='idle'){
+            ctx.fillStyle='#0D7A6E';ctx.font='16px Courier New';ctx.textAlign='center';
+            ctx.fillText('[ PRESS ENTER TO START ]',W/2,H/2);return;
+        }
+
+        asteroids.forEach(a=>drawAst(a));
+        particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.fillStyle=p.color;ctx.globalAlpha=p.life;ctx.fill();ctx.globalAlpha=1;});
+        drawShip(player.x,player.y,shieldActive);
+        drawDiceBox(diceResult);
+
+        // Dice cooldown bar
+        if(diceCooldown>0){
+            ctx.fillStyle='rgba(13,122,110,.25)';ctx.fillRect(W-84,70,62,5);
+            ctx.fillStyle='#0D7A6E';ctx.fillRect(W-84,70,62*(1-diceCooldown/360),5);
+        } else {
+            ctx.fillStyle='rgba(13,122,110,.9)';ctx.font='9px Courier New';ctx.textAlign='center';
+            ctx.fillText('READY',W-53,78);
+        }
+
+        if(doubleScore>0){ctx.fillStyle='#e6a817';ctx.font='11px Courier New';ctx.textAlign='left';ctx.fillText('2x SCORE ACTIVE!',10,22);}
+
+        if(state==='gameover'){
+            ctx.fillStyle='rgba(0,0,0,.75)';ctx.fillRect(0,0,W,H);
+            ctx.fillStyle='#c0392b';ctx.font='bold 28px Courier New';ctx.textAlign='center';
+            ctx.fillText('MISSION FAILED',W/2,H/2-20);
+            ctx.fillStyle='#0D7A6E';ctx.font='14px Courier New';
+            ctx.fillText('SCORE: '+score,W/2,H/2+20);
+            ctx.fillText('[ ENTER ] RESTART',W/2,H/2+50);
+        }
+    }
+
+    function loop(){ animId=requestAnimationFrame(loop); update(); draw(); }
+    function start(){ if(animId) cancelAnimationFrame(animId); init(); animId=requestAnimationFrame(loop); }
+
+    ctx.fillStyle='#020c0a';ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#0D7A6E';ctx.font='16px Courier New';ctx.textAlign='center';
+    ctx.fillText('[ PRESS ENTER TO START ]',W/2,H/2);
+
+    document.addEventListener('keydown',e=>{
+        if(!activeFlags.racer) return;
+        keys[e.key]=true;
+        if(e.key==='Enter'&&(state==='idle'||state==='gameover')) start();
+        if([' ','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)) e.preventDefault();
+    });
+    document.addEventListener('keyup',e=>{keys[e.key]=false;});
+})();
+
+// ─── Contact form ────────────────────────────────────────────────
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.submit-btn');
+    btn.textContent = '[ TRANSMISSION SENT ✓ ]';
+    btn.style.color = '#0D7A6E';
+    btn.style.background = 'rgba(13,122,110,0.1)';
+    btn.disabled = true;
+    this.reset();
+    setTimeout(() => {
+        btn.textContent = '[ SEND TRANSMISSION ]';
+        btn.style.color = '';
+        btn.style.background = '';
+        btn.disabled = false;
+    }, 3500);
+});
+
+// ─── Exit overlay ────────────────────────────────────────────────
+const exitOverlay = document.getElementById('exitOverlay');
+
+document.getElementById('exitTrigger').addEventListener('click', function(e) {
+    e.preventDefault();
+    closeMenu();
+    exitOverlay.classList.add('show');
+});
+
+document.getElementById('exitStay').addEventListener('click',  () => exitOverlay.classList.remove('show'));
+document.getElementById('exitLeave').addEventListener('click', () => { window.location.href = 'inicio.html'; });
+
+window.addEventListener('beforeunload', e => { e.preventDefault(); e.returnValue = ''; });
 </script>
-<script src="scriptIni.js"></script>
 </body>
 </html>
